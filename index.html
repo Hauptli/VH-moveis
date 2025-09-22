@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VH Móveis Planejados - Profissional</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Logo + Título -->
+      <div class="logo-title-container">
+        <img src="WhatsApp_Image_2025-09-01_at_21.32.09__1_-removebg-preview.png" 
+             alt="Logo VH Móveis Planejados" 
+             class="logo" />
+        <h1>VH Móveis Planejados - Profissional</h1>
+      </div>
+
+      <!-- INÍCIO: BOTÃO TOGGLER PARA TELAS PEQUENAS -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        
+      </button>
+      <!-- FIM: BOTÃO TOGGLER -->
+
+      <!-- Menu de navegação -->
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#chat">Atendimento Virtual</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="container section">
+    <h2>Sobre a VH Móveis Planejados</h2>
+    <p>
+      Somos especialistas em móveis planejados sob medida, oferecendo qualidade, design moderno e atendimento personalizado para Florianópolis e região.
+    </p>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="container section">
+    <h2>Nossos Serviços</h2>
+    <ul class="servicos-lista">
+      <li>Móveis planejados para cozinha, quarto, escritório</li>
+      <li>Reforma e manutenção de móveis</li>
+      <li>Instalação de portas e rodapés</li>
+      <li>Consultoria e projeto personalizado</li>
+    </ul>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria" class="container section">
+    <h2>Galeria de Trabalhos</h2>
+    <div class="gallery">
+      <img src="WhatsApp Image 2025-09-01 at 20.54.26.jpeg" alt="Projeto 1" />
+      <img src="WhatsApp Image 2025-09-01 at 20.54.28.jpeg" alt="Projeto 2" />
+      <img src="WhatsApp Image 2025-09-01 at 20.54.29.jpeg" alt="Projeto 3" />
+      <img src="WhatsApp Image 2025-09-01 at 20.54.32.jpeg" alt="Projeto 4" />
+      <img src="WhatsApp Image 2025-09-01 at 20.54.33.jpeg" alt="Projeto 5" />
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="container section">
+    <h2>Solicite um Orçamento</h2>
+    <form id="form-orcamento">
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" required placeholder="Seu nome" />
+    
+      <label for="telefone">Telefone / WhatsApp</label>
+      <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        required
+        placeholder="(48) 9xxxx-xxxx"
+        inputmode="numeric"
+        maxlength="15"
+      />
+    
+      <label for="servico">Tipo de Serviço</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione</option>
+        <option value="Móveis Planejados">Móveis Planejados</option>
+        <option value="Reforma de Móveis">Reforma de Móveis</option>
+        <option value="Instalação de Portas e Rodapés">Instalação de Portas e Rodapés</option>
+        <option value="Consultoria e Projeto">Consultoria e Projeto</option>
+      </select>
+    
+      <label for="mensagem">Mensagem / Detalhes</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva seu projeto ou dúvidas"></textarea>
+    
+      <button type="button" id="enviarWhatsApp">Enviar pelo WhatsApp</button>
+    </form>    
+
+    <!-- BOTÃO WHATSAPP COM IMAGEM -->
+    <a href="https://wa.me/5548984249938" target="_blank" class="whatsapp-float" aria-label="WhatsApp VH Móveis Planejados">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 VH Móveis Planejados - Florianópolis - SC</p>
+  </footer>
+</body>
+</html>

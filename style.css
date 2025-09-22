@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f7f5f3;
+  color: #4a4a48;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: #111; /* preto profissional */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  padding: 0 20px; /* só lateral, sem top/bottom */
+  height: 60px;   /* altura fixa da barra */
+  display: flex;
+  align-items: center; /* garante alinhamento vertical */
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 20px; /* espaço entre logo e título */
+}
+
+/* ================= LOGO + TÍTULO ================= */
+.logo-title-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* ================= MENU ================= */
+nav {
+  margin-left: 40px; /* AFASTA o menu do título/logo */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* espaço entre os links */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+
+  /* alinhamento centralizado na barra */
+  display: flex;
+  align-items: center;
+  height: 60px;   /* mesma altura do header */
+  padding: 0 10px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #d6c5aa;
+  border-bottom: 2px solid #d6c5aa;
+}
+
+/* ================= SEÇÕES ================= */
+.section {
+  padding: 35px 25px;
+  background-color: #fff;
+  margin-top: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3e3b38;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #b69f7d;
+  padding-bottom: 6px;
+}
+
+.servicos-lista {
+  list-style: disc inside;
+  color: #5a5856;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ================= GALERIA ================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover,
+.gallery img:focus {
+  transform: scale(1.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* ================= FORMULÁRIO ================= */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #3e3b38;
+  font-size: 0.95rem;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1.8px solid #c9c6c1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  background-color: #f9f7f4;
+  color: #4a4a48;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #b69f7d;
+  outline: none;
+  background-color: #fff;
+}
+
+form button {
+  background-color: #b69f7d;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(182,159,125,0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #a18159;
+  box-shadow: 0 6px 20px rgba(161,129,89,0.7);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.9rem;
+  color: #88847d;
+  margin-top: 50px;
+  background-color: #e6e2dc;
+  border-top: 1px solid #d1cdc7;
+}
+
+/* ================= WHATSAPP FLUTUANTE ================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav {
+    margin-left: 0; /* no mobile, menu fica colado de novo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  .gallery img {
+    max-height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 40px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .gallery img {
+    max-height: 140px;
+  }
+
+  .container {
+    padding: 15px 15px;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ================= MENU TOGGLER (HAMBÚRGUER) ================= */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1001;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px; /* altura do header */
+    right: 0;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+}
